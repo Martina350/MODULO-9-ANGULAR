@@ -7,8 +7,5 @@ import { Component } from "@angular/core";
 })
 
 export class ProfileComponent {
-  constructor() {
-    console.log("Se cargo el ProfileComponent correctamente");
-    alert("Bienvenido al perfil, estas dentro de la aplicacion!");
-  }
+  // Component logic goes here
 }

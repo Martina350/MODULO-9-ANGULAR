@@ -7,9 +7,5 @@ import { Component } from "@angular/core";
 })
 
 export class ProductComponent {
-  constructor() {
-    console.log("ProductComponent initialized");
-    alert("Welcome to the Product Component!");
-  }
-  
+  // Component logic goes here
 }
