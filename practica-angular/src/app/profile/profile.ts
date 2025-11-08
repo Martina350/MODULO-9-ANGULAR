@@ -1,11 +1,10 @@
 import { Component } from "@angular/core";
 import { Account } from "../account/account";
-import { Transactions } from "../transactions/transactions";
-import { Loans } from "../loans/loans";
+
 
 @Component({
   selector: "my-profile",
-  imports: [Account, Transactions, Loans],
+  imports: [Account],
   templateUrl: "./profile.html",
   styleUrls: ["./profile.css"]
 })
@@ -17,6 +16,8 @@ export class ProfileComponent {
   public location: string;
   public occupation: string;
   public phone: string;
+
+  public showAccount: boolean = true;
 
   ngDoCheck() {
     console.log("ProfileComponent updated");
@@ -37,5 +38,9 @@ export class ProfileComponent {
 
   changeLocation() {
     this.location = "Springfield - The Simpsons";
+  }
+
+  hideAccount(value: boolean) {
+    this.showAccount = value;
   }
 }

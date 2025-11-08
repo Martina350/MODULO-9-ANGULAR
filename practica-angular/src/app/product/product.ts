@@ -1,11 +1,10 @@
 import { Component } from "@angular/core";
 import { Movie } from "../movie/movie";
-import { Sales } from "../sales/sales";
-import { User } from "../user/user";
+
 
 @Component({
   selector: "my-product",
-  imports: [Movie, Sales, User],
+  imports: [Movie],
   templateUrl: "./product.html",
   styleUrls: ["./product.css"]
 })
@@ -16,6 +15,8 @@ export class ProductComponent {
   public brand: string;
   public price: number;  
   public description: string;
+
+  public showMovie: boolean = true;
 
   ngOnInit() {
     console.log("ProductComponent ngOnInit called");
@@ -40,5 +41,9 @@ export class ProductComponent {
 
   changeName(){
     this.name = "Laptop Asus 177h";
+  }
+
+  hideMovie(value: boolean){
+    this.showMovie = value;
   }
 }

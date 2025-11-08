@@ -3,7 +3,22 @@
 <p>{{ description }}</p>
 <p>Brand: {{ brand }}</p>
 <strong>Price: ${{ price }}</strong>
- 
-<app-user></app-user>
-<app-movie></app-movie>
-<app-sales></app-sales>
+
+
+<br>
+<br>
+@if (showMovie==true){
+    <button (click)="hideMovie(false)">Hide Movie Component</button>
+} @else {
+    <button (click)="hideMovie(true)">Show Movie Component</button>
+}
+
+@if (showMovie==true){
+  <app-movie></app-movie>
+}
+
+{{ showMovie }}
+<br>
+<br>
+
+

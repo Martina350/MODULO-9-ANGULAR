@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './movie.css',
 })
 export class Movie {
-
+  ngOnInit() {
+    console.log('Movie component initialized');
+  }
+  ngOnDestroy() {
+    console.log('Movie component destroyed');
+  }
 }
