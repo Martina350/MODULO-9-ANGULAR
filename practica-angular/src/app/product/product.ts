@@ -17,6 +17,10 @@ export class ProductComponent {
   public price: number;  
   public description: string;
 
+  ngOnInit() {
+    console.log("ProductComponent ngOnInit called");
+  }
+
   constructor() {
     this.name = "Laptop";
     this.brand = "TechBrand";
@@ -25,5 +29,4 @@ export class ProductComponent {
 
     console.log("ProductComponent initialized");
   }
-  
 }
