@@ -1,7 +1,11 @@
 import { Component } from "@angular/core";
+import { Account } from "../account/account";
+import { Transactions } from "../transactions/transactions";
+import { Loans } from "../loans/loans";
 
 @Component({
   selector: "my-profile",
+  imports: [Account, Transactions, Loans],
   templateUrl: "./profile.html",
   styleUrls: ["./profile.css"]
 })

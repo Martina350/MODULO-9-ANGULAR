@@ -1,7 +1,11 @@
 import { Component } from "@angular/core";
+import { Movie } from "../movie/movie";
+import { Sales } from "../sales/sales";
+import { User } from "../user/user";
 
 @Component({
   selector: "my-product",
+  imports: [Movie, Sales, User],
   templateUrl: "./product.html",
   styleUrls: ["./product.css"]
 })
