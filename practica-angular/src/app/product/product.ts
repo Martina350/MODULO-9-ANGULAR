@@ -25,6 +25,10 @@ export class ProductComponent {
     console.log("ProductComponent ngDoCheck called");
   }
 
+  ngAfterViewInit() {
+    console.log("ProductComponent ngAfterViewInit called");
+  }
+
   constructor() {
     this.name = "Laptop";
     this.brand = "TechBrand";
