@@ -21,6 +21,10 @@ export class ProductComponent {
     console.log("ProductComponent ngOnInit called");
   }
 
+  ngDoCheck() {
+    console.log("ProductComponent ngDoCheck called");
+  }
+
   constructor() {
     this.name = "Laptop";
     this.brand = "TechBrand";
@@ -28,5 +32,9 @@ export class ProductComponent {
     this.description = "A high-performance laptop";
 
     console.log("ProductComponent initialized");
+  }
+
+  changeName(){
+    this.name = "Laptop Asus 177h";
   }
 }
