@@ -1,3 +1,9 @@
+@defer {
+<my-product></my-product>
+} @placeholder {
+    <h1>Loading product...</h1>
+}
+
 <h1>Angular Templates</h1>
 
 <a [href]="web" [class.exist]="redirect" target="_blank">Visit my web page</a>
@@ -19,7 +25,7 @@
     pair = $even, odd = $odd){
     <li>{{brands.name}} {{i}} {{counter}} {{pair}} {{odd}}</li>
     } @empty {
-        <li>No car brands available</li>
+    <li>No car brands available</li>
     }
 </ul>
 
@@ -30,13 +36,27 @@
 -->
 
 @switch (user.role) {
-    @case('admin') {
-        <app-sales></app-sales> 
-    } 
-    @case('user') {
-        <p>You are a regular user.</p>
-    }
-    @default {
-        <p>You are a guest.</p>
-    }  
+@case('admin') {
+<app-sales></app-sales>
 }
+@case('user') {
+<p>You are a regular user.</p>
+}
+@default {
+<p>You are a guest.</p>
+}
+}
+
+<h3>More tools about Angular Templates</h3>
+
+<ng-container>
+    <h4>This is in a Angular Container</h4>
+</ng-container>
+
+@let country = "USA" +(7+7);
+
+@let hello = "Hello from " + country;
+
+<p>{{hello}}</p>
+
+
