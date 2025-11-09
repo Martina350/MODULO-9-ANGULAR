@@ -1,1 +1,21 @@
-<p>loans works!</p>
+<h1>Angular Templates Excersice</h1>
+
+<a 
+  [href]="web"
+  [class.active]="redirect"
+  [ngStyle]="{
+    'font-size': redirect ? '24px' : '14px'
+  }"
+  target="_blank">
+  Visit my web page
+</a>
+
+
+@if (redirect==true){
+    <p>The link {{web}} works correctly!!</p>
+} @else {
+    <p>Sorry, the link {{web}} is unavailable.</p>
+}
+
+<button (click)="changeRedirect()">Modify Link</button>
+

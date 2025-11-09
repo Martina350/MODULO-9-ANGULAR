@@ -1,0 +1,11 @@
+.exist {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+}
+
+a {
+  background-color: red;
+  color: white;
+  padding: 10px;
+}

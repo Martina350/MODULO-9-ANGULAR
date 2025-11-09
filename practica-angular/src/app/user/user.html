@@ -1,1 +1,16 @@
-<p>user works!</p>
+<h1>Angular Templates</h1>
+
+<a [href]="web" 
+[class.exist]="redirect"
+target="_blank">Visit my web page</a>
+
+<h2>Flow control structures</h2>
+
+@if (redirect==true){
+    <p>The link {{web}} is active</p>
+} @else {
+    <p>The link {{web}} is not active</p>
+}
+
+<button (click)="changeRedirect()">Modify Link</button>
+

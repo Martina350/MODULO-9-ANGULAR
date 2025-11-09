@@ -7,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './user.css',
 })
 export class User {
+  web = "https://amazon.com";
+  redirect = true;
 
+  changeRedirect() {
+    if (this.redirect == false) {
+      this.redirect = true;
+    }else {
+      this.redirect = false;
+    }
+  }
 }

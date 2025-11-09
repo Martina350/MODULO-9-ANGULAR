@@ -1,0 +1,15 @@
+.active {
+  background-color: darkblue;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+a {
+  background-color: orange;
+  color: black;
+  border-radius: 15px;
+  padding: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
