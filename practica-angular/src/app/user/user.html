@@ -22,3 +22,21 @@
         <li>No car brands available</li>
     }
 </ul>
+
+<!--
+@if (user.role == 'admin') {
+    <app-sales></app-sales>
+}
+-->
+
+@switch (user.role) {
+    @case('admin') {
+        <app-sales></app-sales> 
+    } 
+    @case('user') {
+        <p>You are a regular user.</p>
+    }
+    @default {
+        <p>You are a guest.</p>
+    }  
+}

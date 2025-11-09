@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Sales } from '../sales/sales';
 
 @Component({
   selector: 'app-user',
-  imports: [],
+  imports: [Sales],
   templateUrl: './user.html',
   styleUrl: './user.css',
 })
@@ -16,6 +17,13 @@ export class User {
     { id: 4, name: 'Honda' },
     { id: 5, name: 'Nissan' }
   ];
+
+  user = {
+    id: 1,
+    name: "Kenny McCormick",
+    nick: "Oh My God, They Killed Kenny!",
+    role: "admin",
+  };
 
   ngOnInit() {
     this.carBrands = [];

@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Transactions } from '../transactions/transactions';
 
 @Component({
   selector: 'app-loans',
-  imports: [CommonModule],
+  imports: [CommonModule, Transactions],
   templateUrl: './loans.html',
   styleUrls: ['./loans.css'],
 })
@@ -18,6 +19,12 @@ export class Loans {
     { id: 5, amount: 25000, state: 'pending' },
     { id: 6, amount: 30000, state: 'approved' }
   ];
+
+  loans = {
+    id: 1,
+    type: "personal",
+    interest: 15000,
+  }
 
   changeRedirect() {
     if (this.redirect == false) {

@@ -31,3 +31,15 @@
   } @empty {
   <li>No loans available</li>
   }
+
+@switch (loans.type) {
+    @case('personal') {
+        <p>This is a personal loan.</p> 
+    } 
+    @case('hipotecary') {
+        <app-transactions></app-transactions>
+    }
+    @case('vehicle') {
+        <p>This is a vehicle loan.</p>
+    }
+  }
