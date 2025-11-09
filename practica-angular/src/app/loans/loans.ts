@@ -22,7 +22,7 @@ export class Loans {
 
   loans = {
     id: 1,
-    type: "personal",
+    type: "hipotecary",
     interest: 15000,
   }
 
