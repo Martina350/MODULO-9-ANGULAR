@@ -1,21 +1,33 @@
 <h1>Angular Templates Excersice</h1>
 
-<a 
-  [href]="web"
-  [class.active]="redirect"
-  [ngStyle]="{
+<a [href]="web" [class.active]="redirect" [ngStyle]="{
     'font-size': redirect ? '24px' : '14px'
-  }"
-  target="_blank">
+  }" target="_blank">
   Visit my web page
 </a>
 
 
 @if (redirect==true){
-    <p>The link {{web}} works correctly!!</p>
+<p>The link {{web}} works correctly!!</p>
 } @else {
-    <p>Sorry, the link {{web}} is unavailable.</p>
+<p>Sorry, the link {{web}} is unavailable.</p>
 }
 
 <button (click)="changeRedirect()">Modify Link</button>
 
+<h3>Loans List</h3>
+<ul>
+  @for(loan of loansList; track loan.id;
+  let i = $index){
+  <li>
+    Loan ID: {{loan.id}} - Amount: {{loan.amount}} -
+    Status:
+    @if (loan.state == 'approved') {
+    <span style="color:green">{{loan.state}}</span>
+    } @else {
+    <span style="color:red">{{loan.state}}</span>
+    }
+  </li>
+  } @empty {
+  <li>No loans available</li>
+  }
