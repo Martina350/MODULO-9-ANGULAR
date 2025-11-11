@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { Sales } from '../sales/sales';
 import { ProductComponent } from '../product/product';
 import { UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe } from '@angular/common';
+import { ChangeLetterPipe } from '../pipes/changeLetter';
 
 @Component({
   selector: 'app-user',
-  imports: [Sales, ProductComponent, UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe],
+  imports: [Sales, ProductComponent, UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, ChangeLetterPipe],
   templateUrl: './user.html',
   styleUrl: './user.css',
 })

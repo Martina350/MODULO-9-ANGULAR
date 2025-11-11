@@ -4,10 +4,11 @@ import {ProductComponent} from './product/product';
 import {ProfileComponent} from './profile/profile';
 import { User } from './user/user';
 import { Loans } from './loans/loans';
+import { ChangeAsciiPipe } from './pipes/changeAscii';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, User, Loans],
+  imports: [RouterOutlet, User, Loans, ChangeAsciiPipe],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
