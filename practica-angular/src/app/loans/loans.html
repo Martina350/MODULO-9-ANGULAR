@@ -8,9 +8,9 @@
 
 
 @if (redirect==true){
-<p>The link {{web}} works correctly!!</p>
+<p>The link {{web | lowercase}} works correctly!!</p>
 } @else {
-<p>Sorry, the link {{web}} is unavailable.</p>
+<p>Sorry, the link {{web | uppercase}} is unavailable.</p>
 }
 
 <button (click)="changeRedirect()">Modify Link</button>
@@ -20,13 +20,14 @@
   @for(loan of loansList; track loan.id;
   let i = $index){
   <li>
-    Loan ID: {{loan.id}} - Amount: {{loan.amount}} -
+    Loan ID: {{loan.id}} - Amount: {{loan.amount | currency}} -
     Status:
     @if (loan.state == 'approved') {
-    <span style="color:green">{{loan.state}}</span>
+    <span style="color:green">{{loan.state | uppercase}}</span>
     } @else {
-    <span style="color:red">{{loan.state}}</span>
+    <span style="color:red">{{loan.state | uppercase}}</span>
     }
+    - Date: {{loansDate | date:'dd/MM/yyyy HH:mm'}}
   </li>
   } @empty {
   <li>No loans available</li>

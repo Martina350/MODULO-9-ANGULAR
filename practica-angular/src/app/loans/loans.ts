@@ -1,10 +1,10 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, LowerCasePipe, UpperCasePipe, DatePipe, TitleCasePipe, CurrencyPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { Transactions } from '../transactions/transactions';
 
 @Component({
   selector: 'app-loans',
-  imports: [CommonModule, Transactions],
+  imports: [CommonModule, Transactions, LowerCasePipe, UpperCasePipe, DatePipe, TitleCasePipe, CurrencyPipe],
   templateUrl: './loans.html',
   styleUrls: ['./loans.css'],
 })
@@ -19,6 +19,8 @@ export class Loans {
     { id: 5, amount: 25000, state: 'pending' },
     { id: 6, amount: 30000, state: 'approved' }
   ];
+
+  loansDate = new Date();
 
   loans = {
     id: 1,
