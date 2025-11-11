@@ -27,6 +27,8 @@ export class User {
     role: "admin",
   };
 
+  date = new Date(2030, 12, 25);
+
   ngOnInit() {
     this.carBrands = [];
   }
