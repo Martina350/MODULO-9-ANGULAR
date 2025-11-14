@@ -5,3 +5,13 @@
 <h2 [ngClass]="show ? 'painted' : 'noPainted'">Show Painting</h2>
 
 <h2 [ngClass]="hello ? 'hello' : 'noPainted'">Hello</h2>
+
+<h2
+  [ngStyle]="painting ? { 'background-color': 'lightgray' } : { 'background-color': 'lightblue' }"
+>
+  I'm Student
+</h2>
+
+<p [ngStyle]="myStyle">I'm Student</p>
+
+<p [ngStyle]="stylesSp">Spider-Man Across The Spider-Verse</p>
