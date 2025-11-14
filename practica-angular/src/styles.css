@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+.painted {
+  background-color: lightblue;
+  padding: 10px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.noPainted {
+  background-color: lightgray;
+  padding: 6px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.hello {
+  background-color: green;
+  padding: 6px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: 'Courier New', Courier, monospace;
+}
