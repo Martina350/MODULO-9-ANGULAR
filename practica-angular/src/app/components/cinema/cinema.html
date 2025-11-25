@@ -1,0 +1,12 @@
+<hr />
+<h1>{{ title }}</h1>
+
+<ol>
+  @for (movie of moviesExample; track movie.id) {
+    <li>
+      <h2>{{ movie.title }} ({{ movie.releaseYear }})</h2>
+      <p>Director: {{ movie.director }}</p>
+      <p>Genre: {{ movie.genre }}</p>
+    </li>
+  }
+</ol>

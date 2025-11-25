@@ -1,0 +1,9 @@
+<h2>Transacciones</h2>
+@for (transaction of transactionsList; track transaction.id) {
+  <div>
+    <p><strong>Fecha:</strong> {{ transaction.date | date:'dd/MM/yyyy' }}</p>
+    <p><strong>Descripción:</strong> {{ transaction.description }}</p>
+    <p><strong>Monto:</strong> ${{ transaction.amount }}</p>
+    <p><strong>Tipo:</strong> <span [ngClass]="transaction.type === 'income' ? 'income' : 'expense'">{{ transaction.type }}</span></p>
+  </div>
+}

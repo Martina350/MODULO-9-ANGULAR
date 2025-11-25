@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Sales } from '../sales/sales';
 import { ProductComponent } from '../product/product';
 import { UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe } from '@angular/common';
-import { ChangeLetterPipe } from '../pipes/changeLetter';
+import { ChangeLetterPipe } from '../../pipes/changeLetter';
 
 @Component({
   selector: 'app-user',

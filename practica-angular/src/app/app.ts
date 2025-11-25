@@ -1,18 +1,27 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {ProductComponent} from './product/product';
-import {ProfileComponent} from './profile/profile';
-import { User } from './user/user';
-import { Loans } from './loans/loans';
+import {ProductComponent} from './components/product/product';
+import {ProfileComponent} from './components/profile/profile';
+import { User } from './components/user/user';
+import { Loans } from './components/loans/loans';
 import { ChangeAsciiPipe } from './pipes/changeAscii';
-import { Sales } from './sales/sales';
+import { Sales } from './components/sales/sales';
+import { config } from './models/config';
+import { MovieModel } from './models/movies';
+import { Cinema } from './components/cinema/cinema';
+import { Transactions } from './components/transactions/transactions';
+import { Account } from './components/account/account';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Sales, ChangeAsciiPipe],
+  imports: [RouterOutlet, Sales, ChangeAsciiPipe, Cinema, Transactions, Account],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
 export class App {
   protected readonly title = signal('coder');
+
+  titleApp = config.title;
+  descriptionApp = config.description
+
 }
