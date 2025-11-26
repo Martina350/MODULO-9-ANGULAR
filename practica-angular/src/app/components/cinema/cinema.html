@@ -4,9 +4,26 @@
 <ol>
   @for (movie of moviesExample; track movie.id) {
     <li>
-      <h2>{{ movie.title }} ({{ movie.releaseYear }})</h2>
+      <h2>{{ movie.title }}</h2>
       <p>Director: {{ movie.director }}</p>
       <p>Genre: {{ movie.genre }}</p>
+      <p>Platform: {{ movie.platform }}</p>
     </li>
   }
 </ol>
+
+<h1>Form and two-way binding</h1>
+<input type="text" [(ngModel)]="myMovieTitle" placeholder="Enter movie title" />
+
+<button (click)="showMovieTitle()">Show Movie</button>
+
+<button (click)="addNewMovie()">Add New Movie</button>
+
+<p>My favorite movie is: <strong>{{ myMovieTitle }}</strong></p>
+
+<h2>List of Movies</h2>
+<ul>
+  @for (movie of moviesWithoutData; track movie) {
+    <li>{{ movie }}</li>
+  }
+</ul>
