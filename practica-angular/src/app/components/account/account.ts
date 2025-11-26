@@ -13,9 +13,9 @@ export class Account {
   constructor() {
     this.client = new ClientModel(
       1,
-      'Juan',
-      'Pérez',
-      'juan.perez@example.com',
+      'Kenny',
+      'Mccormick',
+      'kenny.mccormick@example.com',
       '1500.00'
     );
   }
