@@ -1,0 +1,11 @@
+<hr>
+
+<h1>Father Component</h1>
+<p>This is the Father component content with other components and that's my son:</p>
+
+<p>It's my son</p>
+
+{{ getHello }}
+
+<app-son [fathersName]="nameFather" (helloSonEvent)="handleHelloSonEvent($event)"></app-son>
+

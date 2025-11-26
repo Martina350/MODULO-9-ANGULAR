@@ -11,10 +11,12 @@ import { MovieModel } from './models/movies';
 import { Cinema } from './components/cinema/cinema';
 import { Transactions } from './components/transactions/transactions';
 import { Account } from './components/account/account';
+import { Father } from './components/father/father';
+import { Son } from './components/son/son';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Sales, ChangeAsciiPipe, Cinema, Transactions, Account, Loans],
+  imports: [RouterOutlet, Sales, ChangeAsciiPipe, Cinema, Transactions, Account, Loans, Father, Son],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

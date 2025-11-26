@@ -43,4 +43,6 @@ export class ProfileComponent {
   hideAccount(value: boolean) {
     this.showAccount = value;
   }
+
+  nameClient: string = 'Juan Perez';
 }

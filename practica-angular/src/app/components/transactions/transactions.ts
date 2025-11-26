@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { TransactionModel } from '../../models/transaction';
 import { DatePipe } from '@angular/common';
 import { NgClass } from '@angular/common';
@@ -28,5 +28,10 @@ export class Transactions {
 
   showTransactionDescription() {
     alert(this.descriptionTransaction);
+  }
+
+  @Output() messageSent = new EventEmitter();
+  sendHello() {
+    this.messageSent.emit('Hello Transaction!');
   }
 }

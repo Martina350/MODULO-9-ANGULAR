@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ClientModel } from '../../models/client';
 
 @Component({
@@ -19,4 +19,6 @@ export class Account {
       '1500.00'
     );
   }
+
+  @Input() nameClient: string = 'Eric Cartman';
 }
