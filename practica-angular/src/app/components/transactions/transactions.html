@@ -1,4 +1,4 @@
-<h2>Transacciones</h2>
+<h2>Transaction</h2>
 @for (transaction of transactionsList; track transaction.id) {
   <div>
     <p><strong>Date:</strong> {{ transaction.date | date:'dd/MM/yyyy' }}</p>
@@ -7,3 +7,8 @@
     <p><strong>Type:</strong> <span [ngClass]="transaction.type === 'income' ? 'income' : 'expense'">{{ transaction.type }}</span></p>
   </div>
 }
+
+<h2>Transaction Description</h2>
+<input type="text" [(ngModel)]="descriptionTransaction" placeholder="Enter transaction description" />
+<button (click)="showTransactionDescription()">Show Description</button>
+<p>My transaction description is: <strong>{{ descriptionTransaction }}</strong></p>

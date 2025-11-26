@@ -2,15 +2,18 @@ import { Component } from '@angular/core';
 import { TransactionModel } from '../../models/transaction';
 import { DatePipe } from '@angular/common';
 import { NgClass } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-transactions',
-  imports: [DatePipe, NgClass],
+  imports: [DatePipe, NgClass, FormsModule],
   templateUrl: './transactions.html',
   styleUrl: './transactions.css',
 })
 export class Transactions {
   public transactionsList: Array<TransactionModel>;
+
+  public descriptionTransaction: string = "";
 
   constructor() {
     this.transactionsList = [
@@ -21,5 +24,9 @@ export class Transactions {
       new TransactionModel(5, new Date('2024-01-19'), 'Product Sale', 450.75, 'income'),
       new TransactionModel(6, new Date('2024-01-20'), 'Restaurant', 85.25, 'expense')
     ];
+  }
+
+  showTransactionDescription() {
+    alert(this.descriptionTransaction);
   }
 }
