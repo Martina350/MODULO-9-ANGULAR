@@ -14,7 +14,7 @@ import { Account } from './components/account/account';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Sales, ChangeAsciiPipe, Cinema, Transactions, Account],
+  imports: [RouterOutlet, Sales, ChangeAsciiPipe, Cinema, Transactions, Account, Loans],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

@@ -1,19 +1,32 @@
 <hr />
 <h1>{{ title }}</h1>
+<p>
+  Choose a color:
+  <input type="color" [(ngModel)]="favoriteColor" />
+</p>
 
 <ol>
-  @for (movie of moviesExample; track movie.id) {
-    <li>
-      <h2>{{ movie.title }}</h2>
-      <p>Director: {{ movie.director }}</p>
-      <p>Genre: {{ movie.genre }}</p>
-      <p>Platform: {{ movie.platform }}</p>
+  @for (movie of moviesExample; track movie.id; let index = $index) {
+    <li> 
+      
+        <h2>{{ movie.title }}</h2>  
+        <p>Director: {{ movie.director }}</p>
+        <p>Genre: {{ movie.genre }}</p>
+        <p>Year: {{ movie.releaseYear }}</p>
+        <span [ngStyle]="{ 'background-color': favoriteColor }">
+          Platform: {{ movie.platform }}
+        </span>
+        <button (click)="removeMovie(index)">Remove</button>
     </li>
   }
 </ol>
 
 <h1>Form and two-way binding</h1>
-<input type="text" [(ngModel)]="myMovieTitle" placeholder="Enter movie title" />
+<input type="text" [(ngModel)]="myMovieTitle" placeholder="Enter movie title" 
+(focus)="onFocus()" 
+(blur)="leftFocus()"
+(keyup)="onKeyUp($event)"
+/>
 
 <button (click)="showMovieTitle()">Show Movie</button>
 

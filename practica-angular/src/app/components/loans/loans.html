@@ -1,4 +1,4 @@
-<h1>Angular Templates Excersice</h1>
+<!--<h1>Angular Templates Excersice</h1>
 
 <a [href]="web" [class.active]="redirect" [ngStyle]="{
     'font-size': redirect ? '24px' : '14px'
@@ -13,12 +13,11 @@
 <p>Sorry, the link {{web | uppercase}} is unavailable.</p>
 }
 
-<button (click)="changeRedirect()">Modify Link</button>
+<button (click)="changeRedirect()">Modify Link</button> -->
 
 <h3>Loans List</h3>
-<ul>
-  @for(loan of loansList; track loan.id;
-  let i = $index){
+<ol>
+  @for(loan of loansList; track loan.id; let index = $index){
   <li>
     Loan ID: {{loan.id}} - Amount: {{loan.amount | currency}} -
     Status:
@@ -28,10 +27,17 @@
     <span style="color:red">{{loan.state | uppercase}}</span>
     }
     - Date: {{loansDate | date:'dd/MM/yyyy HH:mm'}}
+    <button (click)="removeLoan(index)">Remove</button>
   </li>
   } @empty {
   <li>No loans available</li>
   }
+  
+</ol>
+
+<h1>Add a Loan</h1>
+<input type="text" [(ngModel)]="myLoan" placeholder="Enter loan" />
+<button (click)="addNewLoan()">Add New Loan</button>
 
 @switch (loans.type) {
     @case('personal') {

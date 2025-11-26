@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { MovieModel } from '../../models/movies';
 import { FormsModule } from '@angular/forms';
+import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-cinema',
-  imports: [FormsModule],
+  imports: [FormsModule, NgStyle],
   templateUrl: './cinema.html',
   styleUrl: './cinema.css',
 })
@@ -16,6 +17,8 @@ export class Cinema {
   public myMovieTitle: string = "";
 
   public moviesWithoutData: string[] = [];
+
+  public favoriteColor: string = "#FFFFFF";
 
   constructor() {
     this.title = 'My Movie Collection';
@@ -45,5 +48,19 @@ export class Cinema {
     let newMovie = new MovieModel(id, this.myMovieTitle);
     console.log(newMovie);
     this.moviesExample.push(newMovie);
+  }
+
+  removeMovie(index: number) {
+    this.moviesExample.splice(index, 1);
+  }
+
+  onFocus() {
+    console.warn("You are in the input of movie title");
+  }
+  leftFocus() {
+    console.warn("You have left the input of movie title");
+  }
+  onKeyUp(event: KeyboardEvent) {
+    console.log("You are typing the key:" + event.key);
   }
 }
