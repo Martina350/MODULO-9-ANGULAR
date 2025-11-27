@@ -31,6 +31,7 @@ export class Transactions {
   }
 
   @Output() messageSent = new EventEmitter();
+  
   sendHello() {
     this.messageSent.emit('Hello Transaction!');
   }

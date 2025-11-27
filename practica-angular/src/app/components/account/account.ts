@@ -20,5 +20,5 @@ export class Account {
     );
   }
 
-  @Input() nameClient: string = 'Eric Cartman';
+  @Input() nameClient: string = '';
 }

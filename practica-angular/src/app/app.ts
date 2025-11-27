@@ -16,7 +16,7 @@ import { Son } from './components/son/son';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Sales, ChangeAsciiPipe, Cinema, Transactions, Account, Loans, Father, Son],
+  imports: [RouterOutlet, Sales, ChangeAsciiPipe, Cinema, Transactions, Account, Loans, Father, Son, ProfileComponent],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

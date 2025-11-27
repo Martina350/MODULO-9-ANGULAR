@@ -1,10 +1,11 @@
 import { Component } from "@angular/core";
 import { Account } from "../account/account";
+import { Transactions } from "../transactions/transactions";
 
 
 @Component({
   selector: "my-profile",
-  imports: [Account],
+  imports: [Account, Transactions],
   templateUrl: "./profile.html",
   styleUrls: ["./profile.css"]
 })
@@ -45,4 +46,10 @@ export class ProfileComponent {
   }
 
   nameClient: string = 'Juan Perez';
+
+  messageReceived: string = '';
+
+  onMessageReceived(message: string) {
+    this.messageReceived = message;
+  }
 }
