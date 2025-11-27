@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLinkWithHref, RouterLink, RouterLinkActive } from '@angular/router';
 import {ProductComponent} from './components/product/product';
 import {ProfileComponent} from './components/profile/profile';
 import { User } from './components/user/user';
@@ -16,7 +16,7 @@ import { Son } from './components/son/son';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Sales, ChangeAsciiPipe, Cinema, Transactions, Account, Loans, Father, Son, ProfileComponent],
+  imports: [RouterOutlet, Sales, ChangeAsciiPipe, Cinema, Transactions, Account, Loans, Father, Son, ProfileComponent, RouterLink, RouterLinkActive],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
