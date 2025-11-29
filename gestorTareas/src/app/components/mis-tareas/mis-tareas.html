@@ -1,0 +1,47 @@
+<h1>Mis Tareas</h1>
+
+<ul class="lista-tareas">
+  @for (tarea of tareas; track $index; let indice = $index) {
+    <li [ngStyle]="tarea.completada ? {'color': 'green'}:{'color':'red'}">
+      <div class="tarea-info">
+        <h3>{{ tarea.titulo }}</h3>
+        <p>{{ tarea.descripcion }}</p>
+        <p>
+          Estado:
+          <span>{{ tarea.completada ? 'Completada' : 'Pendiente' }}</span>
+        </p>
+      </div>
+
+      <div class="tarea-acciones">
+        <button class="btn-estado" (click)="cambiarEstado(indice +1)">
+          Cambiar Estado
+        </button>
+        <button class="btn-eliminar" (click)="deleteTarea(indice)">
+          Eliminar
+        </button>
+      </div>
+    </li>
+  }
+</ul>
+
+<section class="agregar-rapido">
+  <h2>Agregar Rápido</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="materiaRapida"
+    (focus)="haciendoFoco()"
+    (blur)="saliendoDelFoco()"
+  />
+
+  <button class="btn-agregar" (click)="addTareaRapida()">
+    Agregar Rápido
+  </button>
+
+  <p>Escribiendo: {{ materiaRapida }}</p>
+</section>
+
+
+  
+  
+

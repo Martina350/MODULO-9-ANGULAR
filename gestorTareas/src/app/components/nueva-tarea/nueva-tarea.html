@@ -1,0 +1,16 @@
+<h2>Agregar Materia</h2>
+<p>Materia</p>
+<input type="text" [(ngModel)]="materia">
+<br>
+<p>Descripcion de la tarea</p>
+<input type="text" [(ngModel)]="descripcion">
+<br>
+<br>
+<button (click)="addTarea()">Agregar Tarea</button>
+
+
+<p>
+Mi Tarea es : 
+<strong>{{materia}}</strong> - 
+<strong>{{descripcion}}</strong>
+</p>

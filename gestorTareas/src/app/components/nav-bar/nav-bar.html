@@ -1,0 +1,17 @@
+<nav class="navbar">
+  <ul class="navbar-links">
+    <li>
+      <a routerLink="/tareas" routerLinkActive="activo">Mis Tareas</a>
+    </li>
+    <li>
+      <a routerLink="/nueva-tarea" routerLinkActive="activo">Nueva Tarea</a>
+    </li>
+    <li>
+      <a routerLink="/comunicacion" routerLinkActive="activo">Comunicación</a>
+    </li>
+  </ul>
+
+  <button class="btn-salir" (click)="cerrarSesion()">
+    Cerrar Sesión
+  </button>
+</nav>

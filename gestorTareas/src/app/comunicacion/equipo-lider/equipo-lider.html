@@ -1,0 +1,13 @@
+<section class="comunicacion">
+  <h2>Comunicación entre Componentes</h2>
+  <p>{{ mensaje }}</p>
+  <p>Valor actual del contador: <strong>{{ contador }}</strong></p>
+
+  <app-miembro-equipo
+    [contador]="contador"
+    (incrementar)="onIncrementarDesdeHijo()"
+  ></app-miembro-equipo>
+</section>
+
+    
+
